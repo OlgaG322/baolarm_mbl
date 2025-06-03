@@ -20,8 +20,8 @@ body {
 .container {
     max-width: 340px;
     width: 94vw;
-    margin: 2.5vh auto 0;
-    padding: 12px;
+    margin: 32px auto 0;         /* опустили контейнер на 10px (было 22px) */
+    padding: 22px 12px 8px 12px; /* увеличили верхний, уменьшили нижний паддинг */
     background: var(--secondary-color);
     border-radius: 14px;
     box-shadow: 0 0 16px rgba(0,0,0,0.13);
@@ -59,6 +59,10 @@ h1 {
     margin: 5px 0 10px;
 }
 
+main {
+    margin-top: 15px; /* опустили всё под шапкой еще на 15px */
+}
+
 .time-box {
     background: rgba(255,255,255,0.1);
     border-radius: 10px;
@@ -87,6 +91,10 @@ h1 {
     flex-direction: column;
     gap: 13px;
     margin: 12px 0;
+}
+.controls > * {
+    margin: 0 !important;
+    padding: 0 !important;
 }
 
 .alarm-btn {
@@ -178,7 +186,7 @@ h1 {
 .comment-container {
     background: rgba(255,255,255,0.1);
     border-radius: 9px;
-    padding: 10px;
+    padding: 10px 10px 6px 10px; /* уменьшили нижний паддинг */
     min-height: 70px;
     margin: 12px 0;
     font-size: 1rem;
