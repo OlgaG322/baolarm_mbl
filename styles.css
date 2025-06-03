@@ -73,6 +73,10 @@ h1 {
 .status {
     font-size: 1.1rem;
     font-weight: bold;
+    transition: color 0.2s;
+}
+.status.awake {
+    color: #222;
 }
 
 .controls {
