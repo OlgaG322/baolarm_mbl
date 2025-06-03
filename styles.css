@@ -56,7 +56,7 @@ h1 {
     font-size: 1.08rem;
     font-weight: 800;
     text-transform: uppercase;
-    margin: 5px 0 30px; /* увеличен нижний отступ на 10px */
+    margin: 5px 0 35px; /* увеличен нижний отступ на 5px */
 }
 
 main {
@@ -67,7 +67,7 @@ main {
     background: rgba(255,255,255,0.1);
     border-radius: 10px;
     padding: 10px;
-    margin: 12px 0;
+    margin: 7px 0 12px 0; /* верхний margin уменьшен на 5px */
 }
 
 .time-display {
@@ -110,10 +110,12 @@ main {
     font-size: 1rem;
     font-weight: bold;
     transition: background 0.2s, color 0.2s;
-    width: calc(100% + 10px);
-    max-width: none;
+    width: 100%;
+    max-width: 100%;
     box-sizing: border-box;
-    margin-left: -5px; /* чтобы кнопки были по центру контейнера */
+    padding-left: 15px;
+    padding-right: 15px;
+    margin: 0 auto;
 }
 
 .sleep-btn {
@@ -195,7 +197,7 @@ main {
 .comment-container {
     background: rgba(255,255,255,0.1);
     border-radius: 9px;
-    padding: 10px 10px 6px 10px;
+    padding: 10px 10px 1px 10px; /* нижний паддинг уменьшен на 5px */
     min-height: 70px;
     margin: 12px 0;
     font-size: 1rem;
