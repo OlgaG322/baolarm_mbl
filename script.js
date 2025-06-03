@@ -162,7 +162,7 @@ function initButtons() {
         sleepStart = new Date();
         setRandomButtonLabel();
         resetWakeButton();
-        document.getElementById('sleepStatus').textContent = 'Спит';
+        document.getElementById('sleepStatus').textContent = 'Сплю';
         document.getElementById('comment').textContent = getRandomPhrase('general');
     });
 
@@ -187,7 +187,7 @@ function initButtons() {
         // Комментарий внизу
         const commentType = (hours + minutes/60) >= 7 ? 'good' : 'bad';
         document.getElementById('comment').textContent = getRandomPhrase(commentType);
-        document.getElementById('sleepStatus').textContent = 'Не спит';
+        document.getElementById('sleepStatus').textContent = 'Не сплю';
     });
 
     // Закрытие попапа при клике вне его
