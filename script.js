@@ -112,6 +112,9 @@ document.addEventListener('DOMContentLoaded', () => {
     initButtons();
     requestNotifications();
     setInterval(sendTestPush, 5 * 60 * 1000); // Тестовые пуши каждые 5 минут
+
+    // Показываем первую фразу в нижней плашке при открытии страницы
+    document.getElementById('comment').textContent = getRandomPhrase('general');
 });
 
 function initClock() {
@@ -162,7 +165,7 @@ function initButtons() {
         sleepStart = new Date();
         setRandomButtonLabel();
         resetWakeButton();
-        document.getElementById('sleepStatus').textContent = 'Сплю';
+        setSleepStatus(true);
         document.getElementById('comment').textContent = getRandomPhrase('general');
     });
 
@@ -184,10 +187,10 @@ function initButtons() {
         sleepStart = null;
         playSound(alarmSound);
         sendPush('Проснулся!', `Ты спал ${hours}ч ${minutes}м`);
+        setSleepStatus(false);
         // Комментарий внизу
         const commentType = (hours + minutes/60) >= 7 ? 'good' : 'bad';
         document.getElementById('comment').textContent = getRandomPhrase(commentType);
-        document.getElementById('sleepStatus').textContent = 'Не сплю';
     });
 
     // Закрытие попапа при клике вне его
@@ -242,4 +245,16 @@ function sendPush(title, body) {
 
 function sendTestPush() {
     sendPush('Тестовый push', 'Это тестовое уведомление от Баоларма');
+}
+
+// Статус "Сплю"/"Не сплю" с цветом
+function setSleepStatus(isSleeping) {
+    const el = document.getElementById('sleepStatus');
+    if (isSleeping) {
+        el.textContent = 'Сплю';
+        el.classList.remove('awake');
+    } else {
+        el.textContent = 'Не сплю';
+        el.classList.add('awake');
+    }
 }
