@@ -31,28 +31,30 @@
                         <span class="alarm-hover-hint-sub">Нажми и выбери время</span>
                     </span>
                 </button>
-                <div id="popupWrap">
-                    <div id="timePopup" class="popup" style="display:none;">
-                        <div class="popup-content spinner-popup">
-                            <div class="spinner-row">
-                                <div class="spinner-col">
-                                    <button class="spinner-btn" id="hoursUp">▲</button>
-                                    <div class="spinner-value" id="hoursVal">23</div>
-                                    <button class="spinner-btn" id="hoursDown">▼</button>
-                                </div>
-                                <span class="spinner-sep">:</span>
-                                <div class="spinner-col">
-                                    <button class="spinner-btn" id="minutesUp">▲</button>
-                                    <div class="spinner-value" id="minutesVal">00</div>
-                                    <button class="spinner-btn" id="minutesDown">▼</button>
-                                </div>
-                            </div>
-                            <button id="popupOkBtn" class="btn popup-ok-btn">ОК</button>
-                        </div>
-                    </div>
-                </div>
                 <button id="sleepBtn" class="btn sleep-btn">Иду спать!</button>
                 <button id="wakeBtn" class="btn wake-btn">Я проснулся!</button>
+            </div>
+
+            <!-- Вынесенный попап вне .controls -->
+            <div id="popupWrap">
+                <div id="timePopup" class="popup" style="display:none;">
+                    <div class="popup-content spinner-popup">
+                        <div class="spinner-row">
+                            <div class="spinner-col">
+                                <button class="spinner-btn" id="hoursUp">▲</button>
+                                <div class="spinner-value" id="hoursVal">23</div>
+                                <button class="spinner-btn" id="hoursDown">▼</button>
+                            </div>
+                            <span class="spinner-sep">:</span>
+                            <div class="spinner-col">
+                                <button class="spinner-btn" id="minutesUp">▲</button>
+                                <div class="spinner-value" id="minutesVal">00</div>
+                                <button class="spinner-btn" id="minutesDown">▼</button>
+                            </div>
+                        </div>
+                        <button id="popupOkBtn" class="btn popup-ok-btn">ОК</button>
+                    </div>
+                </div>
             </div>
 
             <div class="comment-container">
