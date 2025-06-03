@@ -20,8 +20,8 @@ body {
 .container {
     max-width: 340px;
     width: 94vw;
-    margin: 32px auto 0;         /* опустили контейнер на 10px (было 22px) */
-    padding: 22px 12px 8px 12px; /* увеличили верхний, уменьшили нижний паддинг */
+    margin: 47px auto 0;         /* опустили контейнер вниз на 15px */
+    padding: 22px 12px 23px 12px;/* увеличили нижний паддинг на 15px */
     background: var(--secondary-color);
     border-radius: 14px;
     box-shadow: 0 0 16px rgba(0,0,0,0.13);
@@ -60,7 +60,7 @@ h1 {
 }
 
 main {
-    margin-top: 15px; /* опустили всё под шапкой еще на 15px */
+    margin-top: 30px; /* опустили всё под шапкой еще на 15px */
 }
 
 .time-box {
