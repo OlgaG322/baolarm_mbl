@@ -280,19 +280,7 @@ main {
     z-index: 1000;
 }
 
-@media (max-width: 480px) {
-    .container {
-        margin-top: 2vh;
-        padding: 7px;
-    }
-    h1 {
-        font-size: 1.5rem;
-    }
-    .alarm-btn, .sleep-btn, .wake-btn {
-        font-size: 0.95rem;
-    }
-
-    .popup-ok-btn {
+.popup-ok-btn {
     width: 100%;
     max-width: 260px;
     margin: 10px auto 0 auto;
@@ -314,4 +302,16 @@ main {
     background: #d94c4c;
     transform: scale(1.04);
 }
+
+@media (max-width: 480px) {
+    .container {
+        margin-top: 2vh;
+        padding: 7px;
+    }
+    h1 {
+        font-size: 1.5rem;
+    }
+    .alarm-btn, .sleep-btn, .wake-btn {
+        font-size: 0.95rem;
+    }
 }
